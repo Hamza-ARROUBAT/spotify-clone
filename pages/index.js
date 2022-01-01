@@ -3,9 +3,7 @@ import Sidebar from '../components/Sidebar'
 
 export default function Home() {
   return (
-    <div className="bg-black h-screen overflow-hidden">
-      <h1>Spotify clone</h1>
-
+    <div className="h-screen overflow-hidden bg-black">
       <main className="flex">
         <Sidebar />
         <Center />
