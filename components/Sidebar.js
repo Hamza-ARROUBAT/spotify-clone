@@ -30,7 +30,7 @@ export default function Sidebar() {
   console.log(playlistId)
 
   return (
-    <div className="h-screen p-5 overflow-y-scroll text-sm text-gray-500 border-r border-gray-900 scrollbar-hide">
+    <div className="h-screen p-5 overflow-y-scroll text-xs text-gray-500 border-r border-gray-900 lg:text-sm scrollbar-hide sm:max-w-[12rem] lg:max-w-[15rem] hidden md:inline-flex">
       <div className="space-y-4">
         <button
           className="flex items-center space-x-2 hover:text-white"
@@ -67,8 +67,9 @@ export default function Sidebar() {
         </button>
         <hr className="border-t-{0.1px} border-gray-900" />
 
-        {playlists.map((playlist) => (
+        {playlists.map((playlist, index) => (
           <p
+            key={index}
             className="cursor-pointer hover:text-white"
             onClick={() => {
               setPlaylistId(playlist.id)

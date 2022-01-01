@@ -41,7 +41,7 @@ export default function Center() {
   return (
     <div className="flex-grow">
       <header className="absolute top-5 right-8">
-        <div className="flex items-center p-1 pr-2 space-x-3 bg-red-400 rounded-full cursor-pointer opacity-90 hover:opacity-80">
+        <div className="flex items-center p-1 pr-2 space-x-3 text-white bg-black rounded-full cursor-pointer opacity-90 hover:opacity-80">
           <img
             className="w-10 h-10 rounded-full"
             src={session?.user.image}
@@ -55,8 +55,13 @@ export default function Center() {
       <section
         className={`flex items-end space-x-7 bg-gradient-to-b to-black ${color} h-80 text-white padding-8`}
       >
-        {/* <img src="" alt="" /> */}
-        <h1>hello</h1>
+        <img className="h-44 w-44" src={playList?.images?.[0]?.url} alt="" />
+        <div>
+          <p>PLAYLIST</p>
+          <h1 className="text-2xl font-bold md:text-3xl xl:text-5xl">
+            {playList?.name}
+          </h1>
+        </div>
       </section>
     </div>
   )
