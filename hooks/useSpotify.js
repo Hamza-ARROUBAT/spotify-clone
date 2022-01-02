@@ -5,11 +5,12 @@ import spotifyApi from '../lib/spotify'
 export default function useSpotify() {
   const { data: session, status } = useSession()
 
+  console.log(session)
+
   useEffect(() => {
     if (session) {
       if ((session.error = 'RefreshAccessTokenError')) {
         // signIn()
-        console.log('oof')
       }
       spotifyApi.setAccessToken(session.user.accessToken)
     }

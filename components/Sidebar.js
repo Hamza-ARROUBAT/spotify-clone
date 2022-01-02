@@ -27,18 +27,9 @@ export default function Sidebar() {
     }
   }, [session, spotifyApi])
 
-  console.log(playlistId)
-
   return (
     <div className="h-screen p-5 overflow-y-scroll text-xs text-gray-500 border-r border-gray-900 lg:text-sm scrollbar-hide sm:max-w-[12rem] lg:max-w-[15rem] hidden md:inline-flex">
       <div className="space-y-4">
-        <button
-          className="flex items-center space-x-2 hover:text-white"
-          onClick={() => signOut()}
-        >
-          <HomeIcon className="w-6 h-5" />
-          <p>LogOut</p>
-        </button>
         <button className="flex items-center space-x-2 hover:text-white">
           <HomeIcon className="w-6 h-5" />
           <p>Home</p>
