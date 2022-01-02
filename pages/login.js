@@ -1,9 +1,6 @@
-import { getProviders, useSession, signIn, signOut } from 'next-auth/react'
-import spotifyApi, { authorizeURL, LOGIN_URI, LOGIN_URL } from '../lib/spotify'
+import { getProviders, signIn } from 'next-auth/react'
 
 export default function Login({ providers }) {
-  const { data: session } = useSession()
-
   return (
     <div className="flex flex-col items-center justify-center w-full min-h-screen bg-black">
       <img className="mb-5 w-52" src="https://links.papareact.com/9xl" alt="" />

@@ -19,7 +19,6 @@ export default function Song({ track, order }) {
       uris: [track.track.uri]
     })
   }
-  console.log(LOGIN_URI)
 
   return (
     <div
